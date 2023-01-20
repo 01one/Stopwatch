@@ -1,4 +1,4 @@
-#  Copyright 2022 Mashiur Rahman Mahid
+#  Copyright 2022-2023 Mashiur Rahman Mahid
 #  This program is distributed in the hope that it will be useful,
 #  but WITHOUT ANY WARRANTY
 import time
@@ -54,6 +54,7 @@ while game_running:
 					count=False
 				elif not count:
 					count=True
+					then=time.time()-d
 		if event.type==pygame.KEYDOWN:
 			if event.key==pygame.K_RETURN:
 				then=time.time()
@@ -66,6 +67,11 @@ while game_running:
 
 	total_second=round(d,4)
 	milliseconds= round((total_second-int(total_second))*1000)
+	#if milliseconds<100:
+	#	if milliseconds>10:
+	#		milliseconds=('0'+str(milliseconds))
+	#	else:
+	#		milliseconds=('00'+str(milliseconds))
 	minutes,seconds=divmod(total_second,60)
 	hours,minutes=divmod(minutes,60)
 	seconds=int(seconds)
