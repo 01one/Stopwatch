@@ -9,10 +9,10 @@ pygame.init()
 clock=pygame.time.Clock()
 screen=pygame.display.set_mode((1200,600),RESIZABLE)
 pygame.display.set_caption("") 
-icon=pygame.image.load('stopwatch.png')
+icon=pygame.image.load('stopwatch.jpg')
 pygame.display.set_icon(icon)
 
-color="#FF55C3"
+color="#7FFFD4"
 font=pygame.font.Font('NeoEuler.otf', 140)
 font1=pygame.font.Font('Genos-Bold.ttf', 20)
 
@@ -37,7 +37,7 @@ class Label():
 
 
 
-img=pygame.image.load('background.png')
+img=pygame.image.load('background.jpg')
 count=False
 d=0
 then=time.time()
